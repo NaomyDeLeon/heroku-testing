@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc
 @SpringBootApplication(exclude = {ErrorMvcAutoConfiguration.class})
-public class Application {
+public class Application implements java.io.Serializable{
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

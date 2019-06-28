@@ -2,6 +2,7 @@
  */
 package avanxo.heroku.technical.test.configurations;
 
+import avanxo.heroku.technical.test.data.procesors.exceptions.InvalidIdException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,14 +18,15 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  */
 @RestController
 @ControllerAdvice
-public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
+public class GlobalErrorHandler
+        extends ResponseEntityExceptionHandler
+        implements java.io.Serializable {
 
-    @ExceptionHandler(value
-            = {IllegalArgumentException.class, IllegalStateException.class})
+    @ExceptionHandler(InvalidIdException.class)
     protected ResponseEntity<Object> handleConflict(
-            RuntimeException ex, WebRequest request) {
-        String bodyOfResponse = "This should be application specific";
-        return handleExceptionInternal(ex, bodyOfResponse,
-                new HttpHeaders(), HttpStatus.CONFLICT, request);
+            InvalidIdException ex,
+            WebRequest request) {
+        return handleExceptionInternal(ex, null,
+                new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 }

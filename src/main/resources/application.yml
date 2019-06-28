@@ -1,0 +1,17 @@
+spring:
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: create-drop
+            properties:
+                jdbc:
+                    time_zone: UTC
+    datasource:
+        url:  jdbc:postgresql://ec2-107-21-216-112.compute-1.amazonaws.com:5432/dc29f6mb17v45t?sslmode=require&user=lwkxjowzqaqmik&password=28dc78c4cdcd03f9386b8450666630d3a62efae266195d2125ef6177663d69d9
+        username: lwkxjowzqaqmik
+        password: 28dc78c4cdcd03f9386b8450666630d3a62efae266195d2125ef6177663d69d9
+    
+    
+    
+    
+
