@@ -2,7 +2,8 @@
 #### version: 1.0.0-beta
 technical test about heroku
 
-[Heroku testing endpoint](https://heroku-testing-java.herokuapp.com/events)
+[Heroku testing endpoint](https://heroku-testing-java.herokuapp.com/events/by-creation-date)
+#
 [Swagger doc](https://heroku-testing-java.herokuapp.com/swagger-ui.html)
 
 # Stack Info
