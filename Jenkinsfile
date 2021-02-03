@@ -4,3 +4,4 @@ node{
         def customImage = docker.build("naomideleon/heroku-testing")
         customImage.push()
     }
+}
