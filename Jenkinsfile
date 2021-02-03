@@ -1,7 +1,7 @@
 node{
     checkout scm
     docker.withRegistry('https://registry.hub.docker.com','dockerHubCredentials') {
-        def customImage = docker.build("naomyDeLeon/heroku-testing")
+        def customImage = docker.build("naomideleon:heroku-testing")
         customImage.push()
     }
 }
