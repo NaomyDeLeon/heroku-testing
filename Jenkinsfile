@@ -1,3 +1,3 @@
-docket_test{
+node{
     checkout scm
 }
